@@ -1,9 +1,9 @@
 package server_client;
 
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public interface MovieDao {
@@ -21,10 +21,10 @@ public interface MovieDao {
 	public String userLoginLog(Customer customer) throws IOException; 
 	
 	//예매 및 결제 후 로그 추가 reservationLog.txt (파일 입출력)
-	public List<Customer> reservationLog(); 
+	public String reservationLog(PaymentDto payment, TicketDto ticket, SeatDto seat) throws IOException;
 	
-	//취소
-	public int cancel(int cu_id) throws ClassNotFoundException, SQLException;
+	//티켓 취소
+	public int cancelTicket(int ticketId) throws ClassNotFoundException, SQLException;
 	
 	//티켓 id 검색
 	public TicketDto ticketFindById(int ticket_id) throws ClassNotFoundException, SQLException;
@@ -48,6 +48,9 @@ public interface MovieDao {
 	public int insertSeat(SeatDto seat) throws ClassNotFoundException,SQLException;
 	
 	//좌석 검색
-	public SeatDto selectSeatDetail(String movie_id) throws ClassNotFoundException, SQLException;
+	public SeatDto selectSeatDetail(int movieId, String seatDetail) throws ClassNotFoundException, SQLException;
+	
+	//좌석 중복 검색
+	public List<SeatDto> selectSeatDetailCheck(int movieId, String seatDetail) throws ClassNotFoundException, SQLException;
 	
 }

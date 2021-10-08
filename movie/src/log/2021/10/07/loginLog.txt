@@ -1,0 +1,1 @@
+Customer [cu_id=3, user_id=tjoeun, user_pw=1234, name=조은, phone=010-2525-8282] 17시 40분 09초 

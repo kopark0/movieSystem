@@ -1,0 +1,1 @@
+Customer [cu_id=13, user_id=tjoeun7, user_pw=123456789, name=최신, phone=010-7785-0966] 14시 34분 15초  Customer [cu_id=14, user_id=tjoeun22, user_pw=22, name=김씨, phone=010-6675-3377] 14시 47분 34초 Customer [cu_id=15, user_id=tjoeun55, user_pw=555, name=김미미, phone=010-2664-2666] 16시 39분 34초 

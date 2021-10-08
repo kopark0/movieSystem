@@ -20,7 +20,7 @@ public class ClientReceiver extends Thread {
 		try(BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()))){
 			//콘솔에 출력하는 기능
 			while(true) {
-				System.out.println("섭값>> "+br.readLine());
+				System.out.println("서버>> "+br.readLine());
 			}
 		}catch (IOException e) {
 			e.printStackTrace();

@@ -1,27 +1,20 @@
 package server_client;
 
-
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
-public class NameTest {
+public class test {
 	public static void main(String[] args) {
 		MovieDao dao = MovieDaoImpl.getInstance();
 		
 		try {
-			List<Customer> userList = new ArrayList<Customer>();
+			PaymentDto pt = dao.selectPayment(14); 
 			
-			userList = dao.userFindByName("아");
-			
-			for(Customer user : userList) {
-				System.out.println(user);
-			}
-			
-			
+			System.out.println(pt);
 		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SQLException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
